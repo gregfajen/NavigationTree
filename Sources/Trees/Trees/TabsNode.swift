@@ -16,9 +16,9 @@ public struct TabsNode<Kind: KindProtocol>: TreeProtocol {
     public init(
         _ lhs: Tree<Kind>,
         _ rhs: Tree<Kind>,
-        style: SlabStyle,
-        background: Leaf,
-        selection: TabIndex
+        style: SlabStyle = .identity,
+        background: Leaf = Kind.makeTree(from: .black),
+        selection: TabIndex = .lhs
     ) {
         self.lhs = lhs
         self.rhs = rhs

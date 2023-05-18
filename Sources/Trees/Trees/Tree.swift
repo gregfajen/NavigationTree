@@ -82,7 +82,7 @@ extension Tree {
         _ lhs: Self,
         _ rhs: Self,
         style: SlabStyle = .identity,
-        background: LeafNode<Kind>,
+        background: LeafNode<Kind> = Kind.makeTree(from: .black),
         selection: TabIndex = .lhs
     ) -> Self {
         ._tabs(Tabs(lhs, rhs, style: style, background: background, selection: selection))
